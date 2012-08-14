@@ -162,6 +162,7 @@ mkdir -p "$BUILD_DIR/bin"
 cp "$VENDORED_NODE/bin/node" "$BUILD_DIR/bin/node"
 
 curl -O https://github.com/downloads/dthompson/heroku-buildpack-nodejs-zip/unzip >/dev/null 2>&1
+mv unzip "$BUILD_DIR/bin/unzip"
 
 # setting up paths for building
 PATH="$VENDORED_SCONS:$VENDORED_NODE/bin:$PATH"
